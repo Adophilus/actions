@@ -33,7 +33,7 @@ jobs:
         uses: jaid/action-npm-install@v1.2.4
         with:
       - name: Build project
-        run: npm ${{ inputs.build_script }}
+        run: npm ${{ inputs.build-script }}
   deploy:
     runs-on:
       - ubuntu-latest
