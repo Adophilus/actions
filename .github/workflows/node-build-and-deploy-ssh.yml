@@ -32,9 +32,8 @@ jobs:
       - name: Install dependencies
         uses: jaid/action-npm-install@v1.2.4
         with:
-          packageManager: pnpm
       - name: Build project
-        run: pnpm ${{ inputs.build_script }}
+        run: npm ${{ inputs.build_script }}
   deploy:
     runs-on:
       - ubuntu-latest
