@@ -34,9 +34,9 @@ jobs:
           corepack prepare pnpm@latest --activate
       - name: Install dependencies
         run: |
-          ls -la
-          cd .. # Quick fix for npm bug https://github.com/Adophilus/changenow-store/actions/runs/3255108218/jobs/5344079942#step:4:6
-          ls -la
+          echo $(ls -la)
+          #cd .. # Quick fix for npm bug https://github.com/Adophilus/changenow-store/actions/runs/3255108218/jobs/5344079942#step:4:6
+          #ls -la
           pnpm install
       - name: Build project
         run: pnpm ${{ inputs.build-script }}
