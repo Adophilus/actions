@@ -21,11 +21,6 @@ on:
       SERVER_DEPLOY_PATH:
         required: true
 jobs:
-  checkout-repo:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout current repo state
-        uses: actions/checkout@v3
   build:
     needs: checkout-repo
     runs-on: ubuntu-latest
