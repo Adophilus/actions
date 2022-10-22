@@ -51,7 +51,9 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ${{ inputs.artifact-store }}
-          path: .
+          path: |
+            .
+            !node_modules/
           retention-days: 1
   deploy:
     runs-on: ubuntu-latest
