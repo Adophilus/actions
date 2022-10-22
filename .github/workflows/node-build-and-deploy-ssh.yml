@@ -22,7 +22,6 @@ on:
         required: true
 jobs:
   build:
-    needs: checkout-repo
     runs-on: ubuntu-latest
     steps:
       - name: Setup node
