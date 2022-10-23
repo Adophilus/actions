@@ -25,6 +25,7 @@ jobs:
       - name: Setup node app on the server
         run: |
           ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} '
+          source ~/.bashrc
           cd "${{ secrets.SERVER_DEPLOY_PATH }}"
           pnpm install
           '
