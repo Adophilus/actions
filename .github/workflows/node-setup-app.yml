@@ -2,10 +2,6 @@
 name: Setup NodeJS app
 on:
   workflow_call:
-    inputs:
-      artifact-name:
-        required: true
-        type: string
     secrets:
       SSH_HOST:
         required: true
@@ -19,10 +15,6 @@ jobs:
   setup:
     runs-on: ubuntu-latest
     steps:
-      - name: Download build workspace artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: ${{ inputs.artifact-name }}
       - name: Setup SSH keys
         uses: shimataro/ssh-key-action@v2
         with:
