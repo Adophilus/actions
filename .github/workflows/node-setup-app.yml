@@ -28,4 +28,7 @@ jobs:
           source ~/.bashrc
           cd "${{ secrets.SERVER_DEPLOY_PATH }}"
           pnpm install
+          pnpm setup
+          cd ../../
+          pnpm restart
           '
