@@ -53,6 +53,7 @@ jobs:
           name: ${{ inputs.artifact-store }}
           path: |
             .
+            !.git/
             !node_modules/
           retention-days: 1
   deploy:
