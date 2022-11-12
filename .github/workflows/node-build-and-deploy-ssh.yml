@@ -11,6 +11,9 @@ on:
         required: false
         type: string
         default: build
+      base-url:
+        required: false
+        type: string
       artifact-name:
         required: true
         type: string
@@ -27,6 +30,10 @@ on:
         required: true
       SERVER_DEPLOY_PATH:
         required: true
+
+env:
+  BASE_URL: ${{ inputs.base-url }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
