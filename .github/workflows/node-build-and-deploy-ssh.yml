@@ -21,6 +21,10 @@ on:
         required: false
         type: string
         default: workspace-built
+      path:
+        required: false
+        type: string
+        default: ''
     secrets:
       SSH_HOST:
         required: true
@@ -62,6 +66,7 @@ jobs:
             .
             !.git/
             !node_modules/
+            ${{ inputs.path }}
           retention-days: 1
   deploy:
     runs-on: ubuntu-latest
